@@ -81,87 +81,7 @@ export default function Portfolio() {
       description:
         "Built and maintained client websites with custom CMS features using Laravel, PHP, and JavaScript. Developed responsive web solutions including sports club and restaurant websites with focus on user experience and performance optimization.",
       technologies: ["Laravel", "PHP", "HTML", "CSS", "JavaScript", "MySQL"],
-    },
-    {
-      title: "Backend Developer",
-      company: "Voice-to-Text Notes App (In Progress)",
-      period: "June 2025 – Present",
-      description:
-        "Building the backend for a voice-to-text notes application designed to help users capture thoughts when writing isn't possible. Developed RESTful APIs for voice recording, transcription, and note management with full CRUD operations. Implemented secure authentication using Google OAuth via Passport.js and integrated advanced middleware for validation and file handling.",
-      technologies: [
-        "Node.js",
-        "MongoDB",
-        "Docker",
-        "Express",
-        "Passport.js",
-        "Google OAuth",
-        "JWT",
-        "Multer",
-        "bcrypt",
-      ],
-      highlights: [
-        "Voice-to-text transcription API development",
-        "Full CRUD operations with categorization (ideas, dreams, tasks)",
-        "Advanced search, filtering, and tagging functionality",
-        "Google OAuth integration with Passport.js",
-        "Containerized deployment with Docker",
-        "Secure middleware implementation with JWT and bcrypt",
-      ],
-    },
-    {
-      title: "Laravel Developer (Training-Based)",
-      company: "E-Commerce Platform – Training Project",
-      period: "June 2025 – Present (In Progress)",
-      description:
-        "Developing a full-featured e-commerce platform using Laravel, MySQL, and Docker. Configured custom .env environment with database sessions, Redis/Memcached caching, email logging, and JWT authentication. Designed RESTful APIs for Product, Merchant, Captain, User, and Order Management with role-based access control and activity logging.",
-      technologies: ["Laravel", "MySQL", "Docker", "Redis", "JWT", "Firebase", "Sanctum", "PHPUnit", "Composer"],
-      highlights: [
-        "Custom .env configuration for database sessions and caching optimization",
-        "RESTful API development for 5+ core modules",
-        "Role-based access control and security implementation",
-        "Integration of advanced Composer packages (Firebase, JWT-Auth, Sanctum)",
-        "Development automation with PHPUnit, Faker, Pint, and Sail",
-      ],
-    },
-    {
-      title: "Laravel Developer",
-      company: "Dhad Platform - Freelancer",
-      period: "April 2025 - June",
-      description:
-        "Participated in the backend development of Dhad, an online educational platform offering personalized learning through diagnostic assessments, live interactive lessons, and collaborative student communities. Developed features to convert student registration requests into structured Excel files for administrative processing and configured environment settings for optimal performance.",
-      technologies: ["Laravel", "MySQL", "Redis", "Excel Export", "PHP"],
-      highlights: [
-        "Excel export functionality for student registration data",
-        "Environment configuration with MySQL and Redis caching",
-        "Performance optimization for registration workflows",
-        "Collaborative development with educators and technical teams",
-        "Educational platform backend architecture",
-      ],
-    },
-    {
-      title: "Back-end Developer (Node.js)",
-      company: "Freelancer",
-      period: "2025 - Present",
-      description:
-        "Blog Post Management API: Built a scalable RESTful API using Node.js, Express, and MongoDB to manage blog content with CRUD operations, image uploads, and secure user authentication.",
-      technologies: ["Node.js", "Express", "MongoDB", "Postman"],
-      github: "https://github.com/Mona664/restApi-blog",
-    },
-    {
-      title: "Back-end Developer (ASP.NET)",
-      company: "Freelancer",
-      period: "2021 - 2023",
-      description:
-        "Developed back-end systems for salon appointment management and online shopping applications, focusing on booking systems, product management, and order processing.",
-      technologies: ["ASP.NET", "C#", "SQL Server"],
-    },
-    {
-      title: "Web Developer (Laravel)",
-      company: "Creatives Group",
-      period: "2020 - 2021",
-      description: "Design and develop websites for clients including sports club and restaurant websites.",
-      technologies: ["Laravel", "PHP", "HTML", "CSS", "JavaScript"],
-    },
+    }
   ]
 
   const projects = [
@@ -567,19 +487,29 @@ Used Redis for caching and Laravel Excel for exporting structured data.`,
             <CardContent>
               <div className="space-y-6">
                 {projects.map((project, index) => (
-                  <Card key={index} className="border-l-4 border-l-blue-500">
-                    <CardHeader>
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <CardTitle className="text-lg mb-2">{project.title}</CardTitle>
-                          <div className="flex flex-wrap gap-2 mb-2">
-                            <Badge variant="outline">{project.year}</Badge>
-                            {project.role && <Badge variant="secondary">{project.role}</Badge>}
+                  <Card key={index} className="border-l-4 border-l-blue-500 p-4 sm:p-6 overflow-hidden">
+                   <CardHeader className="p-0">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                          <div className="flex-1 min-w-0">
+                            <CardTitle className="text-lg mb-2 break-words">
+                              {project.title}
+                            </CardTitle>
+                            <div className="flex flex-wrap gap-2 mb-2 w-full">
+
+                            <Badge variant="outline" className="break-words max-w-full">{project.year}</Badge>
+                            {project.role && (
+                              <Badge variant="secondary" className="break-words max-w-full">
+                                {project.role}
+                              </Badge>
+                            )}
                           </div>
-                          <CardDescription className="font-medium text-blue-600">{project.type}</CardDescription>
+
+                            <CardDescription className="font-medium text-blue-600 break-words">
+                              {project.type}
+                            </CardDescription>
+                          </div>
                         </div>
-                      </div>
-                    </CardHeader>
+                      </CardHeader>
                     <CardContent>
                       <p className="text-gray-700 mb-4">{project.description}</p>
 
