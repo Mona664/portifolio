@@ -488,28 +488,36 @@ Used Redis for caching and Laravel Excel for exporting structured data.`,
               <div className="space-y-6">
                 {projects.map((project, index) => (
                   <Card key={index} className="border-l-4 border-l-blue-500 p-4 sm:p-6 overflow-hidden">
-                   <CardHeader className="p-0">
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
-                          <div className="flex-1 min-w-0">
-                            <CardTitle className="text-lg mb-2 break-words">
-                              {project.title}
-                            </CardTitle>
-                            <div className="flex flex-wrap gap-2 mb-2 w-full">
+                  <CardHeader className="p-0">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                        <div className="flex-1 min-w-0">
+                          <CardTitle className="text-base sm:text-lg mb-2 break-words whitespace-normal">
+                            {project.title}
+                          </CardTitle>
 
-                            <Badge variant="outline" className="break-words max-w-full">{project.year}</Badge>
+                          <div className="flex flex-wrap gap-2 mb-2 w-full">
+                            <Badge
+                              variant="outline"
+                              className="break-words max-w-full whitespace-normal text-sm sm:text-base"
+                            >
+                              {project.year}
+                            </Badge>
                             {project.role && (
-                              <Badge variant="secondary" className="break-words max-w-full">
+                              <Badge
+                                variant="secondary"
+                                className="break-words max-w-full whitespace-normal text-sm sm:text-base"
+                              >
                                 {project.role}
                               </Badge>
                             )}
                           </div>
 
-                            <CardDescription className="font-medium text-blue-600 break-words">
-                              {project.type}
-                            </CardDescription>
-                          </div>
+                          <CardDescription className="font-medium text-blue-600 break-words whitespace-normal text-sm sm:text-base">
+                            {project.type}
+                          </CardDescription>
                         </div>
-                      </CardHeader>
+                      </div>
+                    </CardHeader>
                     <CardContent>
                       <p className="text-gray-700 mb-4">{project.description}</p>
 
