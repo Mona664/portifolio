@@ -86,103 +86,6 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "BeautyCenter – Web Application for Beauty Salon Management",
-      year: "January 2023 – March 2023",
-      description:
-        "Developed a comprehensive web application for beauty salon management with responsive dashboard interface and robust backend functionality.",
-      type: "ASP.NET Full-Stack Development",
-      role: "Dashboard & Backend Developer (Branch: mona – Collaborative Project)",
-      technologies: ["ASP.NET", "C#", "HTML", "CSS", "SQL Server", "Entity Framework", "Bootstrap"],
-      fullDescription: `Developed a responsive dashboard interface that allows salon administrators to manage appointments, services, and client data efficiently.
-
-Implemented core backend functionalities using ASP.NET MVC and C#, ensuring clean separation of concerns and scalable architecture.
-
-Utilized Entity Framework as an ORM to streamline database operations, enabling efficient data access through LINQ and reducing SQL boilerplate.
-
-Integrated SQL Server for structured data storage and retrieval, with secure and optimized queries.
-
-Designed the UI using Bootstrap, ensuring mobile responsiveness and a clean, intuitive layout.
-
-Organized the codebase into modular components (e.g., Services, Clients, Appointments), improving maintainability and readability.
-
-Collaborated with a teammate to ensure seamless integration between frontend and backend, focusing on user experience and system reliability.`,
-      packages: [
-        { name: "Entity Framework", purpose: "Simplifies database interactions using LINQ and C# models" },
-        { name: "Bootstrap", purpose: "Enables responsive and visually appealing UI design" },
-        { name: "ASP.NET MVC", purpose: "Provides structured application architecture (Model-View-Controller)" },
-        { name: "System.Data.SqlClient", purpose: "Facilitates direct communication with SQL Server" },
-        { name: "Microsoft.AspNetCore.Mvc", purpose: "Manages routing, controllers, and HTTP responses" },
-      ],
-      github: "https://github.com/Yihea20/BeautyCenter.git",
-    },
-    {
-      title: "restApi-blog – RESTful API for Blog Management",
-      year: "April 2023 – May 2023",
-      description:
-        "Built a RESTful API using Node.js, Express, and MongoDB to manage blog posts with full CRUD operations, image uploads, and secure authentication.",
-      type: "Node.js Backend Development",
-      role: "Backend Developer (Branch: mona – Solo Project)",
-      technologies: [
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "Multer",
-        "bcryptjs",
-        "dotenv",
-        "Validator",
-      ],
-      fullDescription: `Developed a modular and scalable RESTful API for blog post management using Node.js and Express.js.
-
-Implemented full CRUD operations for blog posts, including creation, editing, deletion, and retrieval.
-
-Integrated image upload functionality using Multer, allowing users to attach visual content to their posts.
-
-Used JWT for secure user authentication and route protection, ensuring only authorized access to sensitive endpoints.
-
-Applied bcryptjs to hash user passwords before storing them in MongoDB, enhancing data security.
-
-Utilized Mongoose to define schemas and interact with MongoDB efficiently using LINQ-like queries.
-
-Managed environment variables securely with dotenv, separating configuration from code.
-
-Validated incoming data using Validator to maintain data integrity and prevent malformed requests.
-
-Organized the codebase into clear modules (controllers, models, routers, middleware), improving readability and maintainability.`,
-      packages: [
-        {
-          name: "Express.js",
-          purpose: "Handles routing and middleware for the API",
-        },
-        {
-          name: "Mongoose",
-          purpose: "Provides schema-based modeling and MongoDB interaction",
-        },
-        {
-          name: "Multer",
-          purpose: "Enables image upload and file handling",
-        },
-        {
-          name: "jsonwebtoken (JWT)",
-          purpose: "Secures routes with token-based authentication",
-        },
-        {
-          name: "bcryptjs",
-          purpose: "Encrypts user passwords before database storage",
-        },
-        {
-          name: "dotenv",
-          purpose: "Manages environment variables securely",
-        },
-        {
-          name: "Validator",
-          purpose: "Validates user input to ensure data integrity",
-        },
-      ],
-      link: "https://github.com/Mona664/restApi-blog",
-    },
-    {
       title: "Voice-to-Text Notes App",
       year: "June 2025 – Present",
       description:
@@ -252,6 +155,73 @@ Used Docker for containerization and PHPUnit for backend testing.`,
         { name: "Docker", purpose: "Containerization for consistent development environments" },
       ],
     },
+     {
+      title: "restApi-blog – RESTful API for Blog Management",
+      year: "June 2025 - July 2025",
+      description:
+        "Built a RESTful API using Node.js, Express, and MongoDB to manage blog posts with full CRUD operations, image uploads, and secure authentication.",
+      type: "Node.js Backend Development",
+      role: "Backend Developer (Branch: mona – Solo Project)",
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Multer",
+        "bcryptjs",
+        "dotenv",
+        "Validator",
+      ],
+      fullDescription: `Developed a modular and scalable RESTful API for blog post management using Node.js and Express.js.
+
+Implemented full CRUD operations for blog posts, including creation, editing, deletion, and retrieval.
+
+Integrated image upload functionality using Multer, allowing users to attach visual content to their posts.
+
+Used JWT for secure user authentication and route protection, ensuring only authorized access to sensitive endpoints.
+
+Applied bcryptjs to hash user passwords before storing them in MongoDB, enhancing data security.
+
+Utilized Mongoose to define schemas and interact with MongoDB efficiently using LINQ-like queries.
+
+Managed environment variables securely with dotenv, separating configuration from code.
+
+Validated incoming data using Validator to maintain data integrity and prevent malformed requests.
+
+Organized the codebase into clear modules (controllers, models, routers, middleware), improving readability and maintainability.`,
+      packages: [
+        {
+          name: "Express.js",
+          purpose: "Handles routing and middleware for the API",
+        },
+        {
+          name: "Mongoose",
+          purpose: "Provides schema-based modeling and MongoDB interaction",
+        },
+        {
+          name: "Multer",
+          purpose: "Enables image upload and file handling",
+        },
+        {
+          name: "jsonwebtoken (JWT)",
+          purpose: "Secures routes with token-based authentication",
+        },
+        {
+          name: "bcryptjs",
+          purpose: "Encrypts user passwords before database storage",
+        },
+        {
+          name: "dotenv",
+          purpose: "Manages environment variables securely",
+        },
+        {
+          name: "Validator",
+          purpose: "Validates user input to ensure data integrity",
+        },
+      ],
+      link: "https://github.com/Mona664/restApi-blog",
+    },
     {
       title: "Dhad Platform",
       year: "April 2025 – June 2025",
@@ -268,12 +238,42 @@ Collaborated with the team to support diagnostic assessments and live interactiv
 
 Used Redis for caching and Laravel Excel for exporting structured data.`,
     },
-    {
+      {
+      title: "BeautyCenter – Web Application for Beauty Salon Management",
+      year: "January 2023 – March 2023",
+      description:
+        "Developed a comprehensive web application for beauty salon management with responsive dashboard interface and robust backend functionality.",
+      type: "ASP.NET Full-Stack Development",
+      role: "Dashboard & Backend Developer (Branch: mona – Collaborative Project)",
+      technologies: ["ASP.NET", "C#", "HTML", "CSS", "SQL Server", "Entity Framework", "Bootstrap"],
+      fullDescription: `Developed a responsive dashboard interface that allows salon administrators to manage appointments, services, and client data efficiently.
+
+Implemented core backend functionalities using ASP.NET MVC and C#, ensuring clean separation of concerns and scalable architecture.
+
+Utilized Entity Framework as an ORM to streamline database operations, enabling efficient data access through LINQ and reducing SQL boilerplate.
+
+Integrated SQL Server for structured data storage and retrieval, with secure and optimized queries.
+
+Designed the UI using Bootstrap, ensuring mobile responsiveness and a clean, intuitive layout.
+
+Organized the codebase into modular components (e.g., Services, Clients, Appointments), improving maintainability and readability.
+
+Collaborated with a teammate to ensure seamless integration between frontend and backend, focusing on user experience and system reliability.`,
+      packages: [
+        { name: "Entity Framework", purpose: "Simplifies database interactions using LINQ and C# models" },
+        { name: "Bootstrap", purpose: "Enables responsive and visually appealing UI design" },
+        { name: "ASP.NET MVC", purpose: "Provides structured application architecture (Model-View-Controller)" },
+        { name: "System.Data.SqlClient", purpose: "Facilitates direct communication with SQL Server" },
+        { name: "Microsoft.AspNetCore.Mvc", purpose: "Manages routing, controllers, and HTTP responses" },
+      ],
+      github: "https://github.com/Yihea20/BeautyCenter.git",
+    },
+     {
       title: "School Management System",
       year: "2021",
       description: "Built a school management application to facilitate tracking student records and attendance.",
       type: "Full-Stack Development",
-    },
+    }
   ]
 
   const toggleProject = (index: number) => {
@@ -699,10 +699,16 @@ Used Redis for caching and Laravel Excel for exporting structured data.`,
                 like to discuss potential collaborations.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mona.mohammad.soliman@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <Button variant="secondary" className="gap-2">
                   <Mail className="w-4 h-4" />
                   Send Email
                 </Button>
+                </a>
                 <a
                   href="https://www.linkedin.com/in/mona-soliman-34577b1b8/"
                   target="_blank"
